@@ -10,6 +10,8 @@ import (
 func main() {
 	app := echo.New()
 
+	app.Static("/public", "public")
+
 	userHandler := handler.UserHandler{}
 	app.Use(withUser)
 	app.GET("/user", userHandler.HandlerUserShow)
