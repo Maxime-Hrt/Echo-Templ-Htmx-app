@@ -3,6 +3,7 @@ module github.com/Maxime-Hrt/got
 go 1.20
 
 require (
+	github.com/a-h/templ v0.2.476 // indirect
 	github.com/labstack/echo/v4 v4.11.4 // indirect
 	github.com/labstack/gommon v0.4.2 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
