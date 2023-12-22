@@ -10,7 +10,7 @@ type UserHandler struct{}
 
 func (h UserHandler) HandlerUserShow(c echo.Context) error {
 	u := model.User{
-		Email: "test@example.com",
+		Email: "test2@example.com",
 	}
 	return render(c, user.Show(u))
 }

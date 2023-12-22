@@ -13,8 +13,15 @@ func main() {
 	app.Static("/public", "public")
 
 	userHandler := handler.UserHandler{}
+	taskHandler := handler.TaskHandler{}
+
 	app.Use(withUser)
+
 	app.GET("/user", userHandler.HandlerUserShow)
+
+	app.GET("/tasks", taskHandler.ShowTasks)
+
+	app.POST("/add-task", taskHandler.HandleTaskAdd)
 
 	app.Start(":3000")
 }
