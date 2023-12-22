@@ -1,12 +1,18 @@
 package layout
 
-templ Base() {
-    <html>
+templ Base(title string) {
+    <!DOCTYPE html>
+    <html lang="en">
     <head>
+        <meta charset="UTF-8" />
+        <title>{ title }</title>
+        <script src="https://unpkg.com/htmx.org@1.9.9" integrity="sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./public/style/output.css" />
     </head>
-    <body>
-        This from the base layout
-        { children... }
+    <body class="h-full w-full bg-yellow-50 flex justify-center py-6">
+        <div class="w-1/2">
+            { children... }
+        </div>
     </body>
     </html>
 }

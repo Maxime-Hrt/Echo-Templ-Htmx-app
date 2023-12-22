@@ -1,0 +1,8 @@
+package components
+
+templ AddTask() {
+    <form hx-post="/add-task" hx-target="#task-list" hx-swap="outerHTML">
+        <input type="text" name="description" placeholder="Enter a task" required />
+        <input type="submit" value="Add Task" />
+    </form>
+}

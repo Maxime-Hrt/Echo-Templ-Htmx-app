@@ -1,0 +1,19 @@
+package tasks
+
+import (
+    "github.com/Maxime-Hrt/got/model"
+    "github.com/Maxime-Hrt/got/view/components"
+	"github.com/Maxime-Hrt/got/view/layout"
+)
+
+func getDescription(task model.Task) string {
+    return task.Description
+}
+
+templ ShowTask(tasks []model.Task) {
+    @layout.Base("Task") {
+        <h1>Tasks:</h1>
+        @components.AddTask()
+        @components.TaskList(tasks)
+    }
+}

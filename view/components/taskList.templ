@@ -1,0 +1,13 @@
+package components
+
+import "github.com/Maxime-Hrt/got/model"
+
+templ TaskList(tasks []model.Task) {
+    <div id="task-list">
+        <ul>
+            for _, task := range tasks {
+                <li>{ task.Description } - JOJO</li>
+            }
+        </ul>
+    </div>
+}
